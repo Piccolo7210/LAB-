@@ -1,0 +1,75 @@
+#include<stdio.h>
+int main()
+{
+	int i;
+	float subc,credit,marks,ltgrade,gradept,ttlgradept=0.0,avg,creditcalc,sum=0.0,ttlcredit=0.0;
+	printf("Sub Code\tCredit\tMarks\tLT Grade\tGrade PT\n");
+	printf("--------\t------\t-----\t--------\t--------\n");
+		for(i=1;i<=5;i++)
+		{
+			scanf("%f",&subc);
+			scanf("%f",&credit);
+			scanf("%f",&marks);
+			printf("%d\t",(int)subc);
+			printf("      \t%d\t",(int)credit);
+			printf("  %d\t",(int)marks);
+	
+				if(marks>=80 && marks<=100)
+					{		
+					  printf("  A+\t\t4.00\n");
+					  gradept=4.00;
+					}
+				else if(marks>=75 && marks<=79)
+					{		
+					  printf("  A\t\t3.75\n");
+					  gradept=3.75;
+					}
+				else if(marks>=70 && marks<=74)
+					{		
+					  printf("  A-\t\t3.50\n");
+					  gradept=3.50;
+					}
+				else if(marks>=65 && marks<=69)
+					{		
+					  printf("  B+\t\t3.25\n");
+					  gradept=3.25;
+					}
+				else if(marks>=60 && marks<=64)
+					{		
+					  printf("  B\t\t3.00\n");
+					  gradept=3.00;
+					}
+				else if(marks>=55 && marks<=59)
+					{		
+					  printf("  B-\t\t2.75\n");
+					  gradept=2.75;
+					}
+				else if(marks>=50 && marks<=54)
+					{		
+					  printf("  C+\t\t2.50\n");
+					  gradept=2.50;
+					}
+				else if(marks>=45 && marks<=49)
+					{		
+					  printf("  C\t\t2.25\n");
+					  gradept=2.25;
+					}
+				else if(marks>=40 && marks<=44)
+					{		
+					  printf("  D\t\t2.00\n");
+					  gradept=2.00;
+					}
+				else if(marks>=0 && marks<40)
+					{		
+					  printf("  F\t\t0.00\n");
+					  gradept=0.00;
+					}
+			creditcalc=gradept*credit;
+			ttlgradept=ttlgradept+creditcalc;
+			ttlcredit=ttlcredit+credit;
+			printf("\n");
+		}
+	avg=ttlgradept/ttlcredit;
+	printf("\n\n\nGPA =%.2f",avg);
+
+}
