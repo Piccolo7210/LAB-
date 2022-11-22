@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int A[2]={0,0};
+    int B[2]={3,4};
+    int AB[2],i;
+    printf("A vector = %di + %dj\n",A[0],A[1]);
+    printf("B vector = %di + %dj\n",B[0],B[1]);
+    for(i=0;i<2;i++)
+    {
+        AB[i]=B[i]-A[i];
+    }
+    printf("AB vector = %di + %dj\n",AB[0],AB[1]);
+}
