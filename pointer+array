@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+  char c[10]={1,2,3,4};
+  int a[10]={1,2,3,4};
+
+  /*printf("Size of char = %ld\n", sizeof(char));
+  printf("Size of int = %ld\n", sizeof(int));
+  printf("Size of c = %ld\n", sizeof(c));
+  printf("Size of a = %ld\n\n", sizeof(a));
+
+  printf("Add of c = %p\n", c);
+  printf("Add of c[0] = %p\n", &c[0]);
+  printf("Add of c[1] = %p\n\n", &c[1]);
+
+  printf("Add of a = %p\n", a);
+  printf("Add of a[0] = %p\n", &a[0]);
+  printf("Add of a[1] = %p\n\n", &a[1]);
+
+  printf("Val of c[1] = %d\n", c[1]);
+  printf("Val of a[1] = %d\n", a[1]);
+
+  printf("Val of c[6] = %d\n", c[6]);
+  printf("Val of a[6] = %d\n\n", a[6]);*/
+  printf("Val of a[2] = %d\n", a[2]);
+  printf("Val of *(a+2) = %d\n",*(a+2));
+  printf("Val of *(2+a) = %d\n",*(2+a));
+  printf("Val of 2[a] = %d\n",2[a]);
+// a[i],i[a],*(a+i),*(i+a) gives same value
+
+  return EXIT_SUCCESS;
+}
+
