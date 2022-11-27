@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 int main(void) {
-  char c[10]={1,2,3,4};
-  int a[10]={1,2,3,4};
+  //char c[10]={1,2,3,4};
+  //int a[10]={1,2,3,4};
 
   /*printf("Size of char = %ld\n", sizeof(char));
   printf("Size of int = %ld\n", sizeof(int));
@@ -23,12 +23,54 @@ int main(void) {
 
   printf("Val of c[6] = %d\n", c[6]);
   printf("Val of a[6] = %d\n\n", a[6]);*/
-  printf("Val of a[2] = %d\n", a[2]);
+  /*printf("Val of a[2] = %d\n", a[2]);
   printf("Val of *(a+2) = %d\n",*(a+2));
   printf("Val of *(2+a) = %d\n",*(2+a));
-  printf("Val of 2[a] = %d\n",2[a]);
+  printf("Val of 2[a] = %d\n",2[a]);*/
 // a[i],i[a],*(a+i),*(i+a) gives same value
+	/*int *c,a[3]={20,10,30},b;
+	  c=a;
+	  b=10;
+	 
+	printf("   &c = %p\n",&c);
+	printf("    c = %p\n",c);
+	printf("&c[0] = %p\n",&c[0]);
+	printf(" c[0] = %d\n",c[0]);
+	printf("(c+0) = %p\n",(c+0));
+	printf("   *c = %d\n",*c);
+
+	printf("   &a = %p\n",&a);
+	printf("    a = %p\n",a);
+	printf("&a[0] = %p\n",&a[0]);
+	printf("(a+0) = %p\n",(a+0));
+	printf("   *a = %d\n",*a);
+	printf(" a[0] = %d\n",a[0]);
+	
+for(int i=0;i<3;i++)
+{
+	printf("a[%d] = %d\t",i,a[i]);
+	printf("c[%d] = %d\n",i,c[i]);
+}
+*/
+//char name[50]="Mustakim Bin Mohsin";
+int i;
+char *name="Mustakim Bin Mohsin",*s;
+	s=name;
+	printf("%s",(name+13));
+	printf("\n");
+	while(*s !='\0'){
+	printf("%c",*s++);
+}
+printf("\n");
+i=0;
+for(;;){
+	printf("%d\n",i++);
+if(i==2)
+break;
+}
+	
 
   return EXIT_SUCCESS;
 }
+
 
