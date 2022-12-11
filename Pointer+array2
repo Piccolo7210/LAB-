@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAXROW  2
+#define MAXCOL  3
+
+int main(void) {
+  int r,c;
+  int a[MAXROW][MAXCOL]={0,1,2,3,4,5};
+  int (*b)[3], *d;
+
+  for(r=0; r<MAXROW; r++) {
+    for(c=0; c<MAXCOL; c++) {
+      printf("%3d",a[r][c]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+
+  for(r=0; r<MAXROW; r++) {
+    for(c=0; c<MAXCOL; c++) {
+      printf("%p=%3d\n",&a[r][c], a[r][c]);
+    }
+  }
+  printf("\n");
+
+  d=&a[0][0];
+  for(r=0; r<MAXROW*MAXCOL; r++,d++) {
+      printf("%p=%3d\n",d,*d);
+  }
+  printf("\n");
+
+  b=a;
+  for(r=0; r<MAXROW; r++) {
+    //for(c=0; c<MAXCOL; c++) {
+      printf("%p=%3d\n",*(b+r),*(*(b+r)));
+    //}
+  }
+  printf("\n");
+
+
+  return EXIT_SUCCESS;
+}
+
