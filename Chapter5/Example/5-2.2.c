@@ -10,9 +10,20 @@ int main(){
 	printf("Length of the a2 string %d\n",strlen(a2));
 	int i;
 	i=strcmp(a1,a2);
-	if(a==0){
+	if(i==0){
 	printf("Equal strings");	
 	}
-	else
-
+	else if(i<0){
+	printf("%s is less than %s\n",a1,a2);	
+	}
+	else {
+	printf("%s is greater than %s\n",a1,a2);	
+	}
+	if(strlen(a1)+strlen(a2)<80){
+	strcat(a1,a2);	
+	printf("%s\n",a1);
+	}
+	strcpy(a1,a2);
+	printf("%s %s\n",a1,a2);
+	return 0;
 }
